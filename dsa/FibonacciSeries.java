@@ -1,20 +1,21 @@
+//code for printing fibonacci series.
 class FibonacciSeries{
-	public int Fibonacci(int x){
+	public int Fibonacci(int n){
 		int first = 0;
 		int second = 1;
 		int sum = 0;
-		if(x == 0){
+		if(n == 0){
 			return first;
 		}
-		else if(x == 1){
+		else if(n == 1){
 			return second;
 		}
-		for(int i = 2; i <= x; i++){
+		for(int i = 2; i <= n; i++){
 			sum = first+second;
 			first = second;
 			second = sum;
 		}
-		return sum;
+		return sum; //return the fibonacci of nth term.
 	}
 	public static void main(String[] args){
 		FibonacciSeries fi = new FibonacciSeries();
@@ -27,3 +28,4 @@ class FibonacciSeries{
 		System.out.println(fi.Fibonacci(7));
 	}
 }
+
